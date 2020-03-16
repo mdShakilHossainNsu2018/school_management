@@ -22,3 +22,9 @@ Route::resource('/', 'WelcomeController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/sign_up', "RegisterController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

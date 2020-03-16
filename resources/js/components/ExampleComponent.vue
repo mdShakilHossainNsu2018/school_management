@@ -1,24 +1,23 @@
 <template>
     <div class="container">
-        <div>
-            <full-page ref="fullpage" :options="options" id="fullpage">
-                <div class="section">
-                   {{count}}
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">Example Component</div>
+
+                    <div class="card-body">
+                        I'm an example component.
+                    </div>
                 </div>
-                <div class="section">
-                    Second section ...
-                </div>
-            </full-page>
+            </div>
         </div>
     </div>
 </template>
 
 <script>
     export default {
-       computed: {
-           count(){
-               return this.$store.state.counter;
-           }
-       }
+        mounted() {
+            console.log('Component mounted.')
+        }
     }
 </script>

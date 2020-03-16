@@ -25,7 +25,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row">
+                        <div class="form-group row ">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">
@@ -38,6 +38,29 @@
                                 @enderror
                             </div>
                         </div>
+
+
+                        <div class="form-group row">
+                            {!! Form::label('user_id', 'User Id', ['class' => 'control-label col-md-4 col-form-label text-md-right']) !!}
+
+                            <div class="col-md-6">
+
+                            @if($errors->first('user_id'))
+
+                                {!! Form::text('user_id', null, ['class' => 'form-control']) !!}('user_id', null, ['class' => 'form-control-lg ml-3 is_invalid',  'autocomplete' => 'off' , 'placeholder' => '']) !!}
+                            @else
+                                {!! Form::text('user_id', null, ['class' => 'form-control',  'autocomplete' => 'off' , 'placeholder' => '']) !!}
+                            @endif
+
+                            @error('user_id')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                            </div>
+                        </div>
+
+
+                        {!! Form::hidden('user_type', '', ['id' => 'id']) !!}
+
 
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>

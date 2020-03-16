@@ -15,7 +15,7 @@ class AddUserIdToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
             //
-            $table->integer('user_id')->nullable()->index();
+            $table->string('user_id')->nullable()->index();
         });
     }
 

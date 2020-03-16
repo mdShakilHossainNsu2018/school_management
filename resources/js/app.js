@@ -5,16 +5,8 @@
  */
 
 require('./bootstrap');
-import Vuex from 'vuex'
-import {store} from './store/store';
 
 window.Vue = require('vue');
-
-import 'fullpage.js/vendors/scrolloverflow' // Optional. When using scrollOverflow:true
-// import './fullpage.scrollHorizontally.min' // Optional. When using fullpage extensions
-import VueFullPage from 'vue-fullpage.js';
-
-
 
 /**
  * The following block of code may be used to automatically register your
@@ -34,14 +26,7 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
-Vue.use(Vuex);
-Vue.use(VueFullPage);
-
-
 
 const app = new Vue({
-
-
     el: '#app',
-    store,
 });
